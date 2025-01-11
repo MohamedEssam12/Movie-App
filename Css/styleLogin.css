@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h4,
+p {
+    color: #fff
+}
+
+body {
+    background-color: #22254b;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url(../assets/Movies-background.webp);
+    background-position: center;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    padding: 25px 60px;
+}
+
+nav a img {
+    width: 160px;
+}
+
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    padding: 60px;
+    border-radius: 4px;
+    background-color: rgba(55, 59, 105, 0.75);
+    transform: translate(-50%, -50%);
+
+}
+
+.form-wrapper h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-wrapper .form {
+    margin: 25px 0 65px;
+}
+
+.form .form-control {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background-color: #51579b;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+    padding: 16px 20px 0;
+    background-color: #51579b;
+
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+.form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: #6699cc;
+    margin: 25px 0 10px;
+    transition: 0.1s ease;
+}
+
+.form button:hover {
+    background-color: #6699cc;
+
+}
+
+.form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .remember-me {
+    display: flex;
+}
+
+.form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+.form .form-help :where(label, a) {
+    font-size: 0.9rem;
+}
+
+.form-wrapper :where(label, p, a) {
+    color: #b3b3b3;
+}
+
+.form-wrapper2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 480px;
+    /* height: 100%; */
+    padding: 65px;
+    border-radius: 4px;
+    background-color: rgba(55, 59, 105, 0.75);
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper2 .form {
+    margin: 25px 0 65px;
+}
+
+.form-wrapper2 :where(label, p, a) {
+    color: #b3b3b3;
+}
+
+.form .form-control2 {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.form-control2 input {
+    height: 100%;
+    width: 100%;
+    background-color: #51579b;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+/* .form-control2 input:is(:focus, :valid) {
+    padding: 10 10px 0;
+    background-color: #51579b;
+
+} */
+
+
+.form-control2 label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-130%);
+    font-size: 0.75rem;
+    /* transition: all 0.1s ease; */
+}
+
+/* .form-control2 input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+} */
+
+.form .form-terms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .form-terms :where(label, a) {
+    font-size: 0.9rem;
+}
+
+.existIdDanger {
+    color: red;
+    margin: 30px;
+}
+
+.existIdSuccess {
+    color: green;
+    margin: 30px;
+}
+
+/* VALIDATION */
+
+#errorn {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+#errore {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+#errorp {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+
+
+
+
+@media(max-width: 740px) {
+    body::before {
+        display: none;
+    }
+
+    nav,
+    .form-wrapper,
+    .form-wrapper2 {
+        padding: 20px;
+    }
+
+    nav a img {
+        width: 140px;
+    }
+
+    .form-wrapper,
+    .form-wrapper2 {
+        top: 43%;
+        width: 100%;
+    }
+
+    .form-wrapper .form,
+    .form-wrapper2 .form {
+        margin: 25px 0 40px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/movies icon.png" type="image/x-icon">
+
+    <title>Sign In || Sign Up</title>
+    <link rel="stylesheet" href="Css/styleLogin.css">
+</head>
+
+<body>
+    <span class="" style="display: none;" id="username"></span>
+
+    <div class="form-wrapper">
+        <h2>Sign In</h2>
+        <div class="form">
+            <div class="form-control">
+                <input type="text" required id="signinEmail">
+                <label>Enter Your Email </label>
+            </div>
+            <div class="form-control">
+                <input type="password" required id="signinPassword">
+                <label>Enter Your Password</label>
+            </div>
+
+            <p id="incorrect"></p>
+
+            <button onclick="login()">Sign In</button>
+
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+        </div>
+        <p> Don't have an account? <a href="signup.html"> Sign Up</a></p>
+    </div>
+
+    <script src="JS/LoginJs.js"></script>
+</body>
+
+</html>
